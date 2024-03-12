@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="zh-tw">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="assets/stylesheet/style.css">
+    <title>鹽埕區美食推薦</title>
+</head>
+
+<body>
+    <div class="show">
+        <a id="text">今日推薦是...</a> <br>
+        <a id="text">{{name}}</a> <br>
+        <div class="food-box">
+            <img src="assets/img/{{food}}" id="food-img">
+                <a class="caption">{{details}}</a> <br>
+        </div>
+        <a id="text">相關店家資訊</a>
+    </div>
+    <div class="middle"></div>
+        <div class="store">
+            {% for n in data%}
+                <a class='stores' href={{ n[0] }}>
+                    {% for k in n[1:]%}
+                        {{ k }} <br>
+                    {% endfor %}
+                </a>
+            {% endfor%}
+        </div>
+    <div class="show">
+        <a id="text">沒有滿意的餐廳嗎?</a>
+        <form action="/reset">
+            <button id="submit-reset" type="submit">換個口味試試!</button>
+        </form>
+        
+    </div>
+</body>
+
+</html>

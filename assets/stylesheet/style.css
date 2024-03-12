@@ -1,0 +1,92 @@
+* {
+    background-color: rgb(37, 37, 37);
+}
+
+.show {
+    font-size: 30px;
+    text-align: center;
+    color: aliceblue;
+}
+
+#text {
+    height: 50%;
+    padding-bottom: 20px;
+    margin-bottom: 20px;
+    letter-spacing: 2px;
+    line-height: 1.5;
+    margin-bottom: 10px;
+}
+
+.food-box,
+.caption-container,
+.caption,
+#food-img {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    margin-bottom: 40px;
+    position: relative;
+}
+
+#food-img {
+    margin-top: 40px;
+    border-radius: 9%;
+    width: 35%;
+    height: 35%;
+    left: -5%;
+}
+
+.caption {
+    position: absolute;
+    top: 50%;
+    left: 70%;
+    width: 32%;
+    height: 55%;
+    padding: 3% 30px 3% 30px;
+    transform: translate(-50%, -50%);
+    background-color: rgb(22, 22, 22);
+    color: white;
+    border-radius: 20px;
+    outline: 1px solid rgba(198, 202, 214, 0);
+    font-size: 24px;
+    text-decoration: none;
+    transition: .2s
+}
+
+
+.store .stores {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    background-color: #968f8f;
+    border-radius: 40px;
+    color: inherit;
+    outline: 1px solid rgba(198, 202, 214, 0);
+    padding: 2rem;
+    margin: 40px 100px 40px 100px ;
+    font-size: 20px;
+    text-align: left;
+    text-decoration: none;
+    transition: .2s
+}
+
+.stores:hover {
+    background-color: #6d6060b0;
+    cursor: pointer;
+}
+
+#submit-reset {
+    background-color: rgb(252, 198, 198);
+    font-size: 17px;
+    color: rgb(2, 2, 2);
+    margin: 30px 30px 50px;
+    padding: 10px;
+    width: 150px;
+    height: 50px;
+    border-radius: 25px;
+}
+
+#submit-reset:hover{
+    background-color: rgb(160, 131, 131);
+    cursor: pointer;
+}
