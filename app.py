@@ -30,9 +30,7 @@ def index():
         field.append(f'地點名稱: {search_name}')
         field.append(f'地址: {place.get("vicinity")}')
         
-        details_result = gmaps.place(place.get('place_id'), language='zh-tw')
-        result = details_result.get("result", {})
-        opening_hours = result.get("opening_hours", {})
+        opening_hours = gmaps.place(place.get('place_id'), language='zh-tw').get("result", {}).get("opening_hours", {})
         
         if opening_hours.get("weekday_text"):
            field.append(f'營業時間(今日): {opening_hours["weekday_text"][datetime.utcnow().isoweekday()-1][4:]}')
