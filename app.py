@@ -20,7 +20,7 @@ def index():
     food = random.choice(os.listdir('assets/img'))
     name = food.split('.')[0]
     places_result = gmaps.places_nearby(LOCATION, keyword=name, radius=500, language="zh-tw")
-    
+
     data = []
     for place in places_result.get("results", []):
         search_name = place.get("name")
